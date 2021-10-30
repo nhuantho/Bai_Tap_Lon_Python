@@ -60,7 +60,7 @@ font = pygame.font.SysFont('Helvetica', 16)
 
 # Load ảnh
 
-background_image = pygame.image.load('Bach_ground.png').convert()
+background_image = pygame.image.load('back_ground.jpg').convert()
 base_image = pygame.image.load('base.png').convert_alpha()
 base_explpded_imade=pygame.image.load('base_explpded.png').convert_alpha()
 

@@ -9,7 +9,7 @@ SCREEN_HEIGHT = 480
 
 game_screen=pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 pygame.display.set_caption('Bài tập lớn Python')
-background_image = pygame.image.load('Bach_ground.png').convert()
+background_image = pygame.image.load('back_ground.jpg').convert()
 start_image=pygame.image.load('start.png')
 exit_image=pygame.image.load('exit.png')
 
