@@ -5,6 +5,8 @@ import pygame
 from pygame.locals import *
 import random
 
+from pygame.mixer import fadeout
+
 from Function import CheckUfoHit, MoveUfo, UpdateHitUfo, UpdateRay, CheckBaseHit , CheckBaseUfo
 
 # Xác định màu sắc
@@ -60,7 +62,7 @@ font = pygame.font.SysFont('Helvetica', 16)
 
 # Load ảnh
 
-background_image = pygame.image.load('back_ground.jpg').convert()
+background_image = pygame.image.load('back_ground2.png').convert()
 base_image = pygame.image.load('base.png').convert_alpha()
 base_explpded_imade=pygame.image.load('base_explpded.png').convert_alpha()
 
@@ -76,6 +78,11 @@ ufo_2_exploded_image = pygame.image.load('ufo_2_exploded.png').convert_alpha()
 ufo_ray_image_1 = pygame.image.load('ufo_ray_1.png').convert_alpha()
 ufo_ray_image_2 = pygame.image.load('ufo_ray_2.png').convert_alpha()
 
+levelup= pygame.image.load('level_up.png').convert_alpha()
+level1= pygame.image.load('level_1.png').convert_alpha()
+level2= pygame.image.load('level_2.png').convert_alpha()
+level3= pygame.image.load('level_3.png').convert_alpha()
+level4= pygame.image.load('level_4.png').convert_alpha()
 
 # Load âm thanh
 spaceship_hit_sound = pygame.mixer.Sound('spaceship_hit.ogg')
@@ -172,7 +179,9 @@ def main():
     missiles = GAME_MISSILES
     game_over = False
 
-
+    check_level1=40
+    check_level2=40
+    check_level3=40
     # vòng lặp game
     run=True
     while run:
@@ -243,7 +252,8 @@ def main():
             game_screen.blit(missile_image, [base_x + MISSILE_PLATFORM, base_y - missile_height])
         
         # vẽ UFOs
-
+        #level 1
+        if(score<200): game_screen.blit(level1, [590, 30])
         # ufo 1, ufo 2
         # cập nhật vị trí ufo
         MoveUfo.move_ufo(ufo_1, ufo_width)
@@ -331,8 +341,12 @@ def main():
             game_screen.blit(missile_ufo_fired_image, [missile_ufo_2_x, missile_ufo_2_y])
             missile_ufo_2_y+=15
 
+        
         #level 2 thêm 1 ufo 3
         if int(score)>=200:
+            if check_level1>0: game_screen.blit(levelup, [295, 215])
+            check_level1-=1
+            game_screen.blit(level2, [590, 30])
             # cập nhật vị trí ufo 
             MoveUfo.move_ufo(ufo_3, ufo_width)
 
@@ -377,9 +391,12 @@ def main():
             if(missile_ufo_3_x!=0 and missile_ufo_3_y!=0):   
                 game_screen.blit(missile_ufo_fired_image, [missile_ufo_3_x, missile_ufo_3_y])
                 missile_ufo_3_y+=20
-        
+
         # level 3 thêm 2 ufo 4, 5
         if int(score)>=500:
+            if check_level2>0: game_screen.blit(levelup, [295, 215])
+            check_level2-=1
+            game_screen.blit(level3, [590, 30])
             #ufo 4
             # cập nhật vị trí ufo
             MoveUfo.move_ufo(ufo_4, ufo_width)
@@ -470,9 +487,14 @@ def main():
             if(missile_ufo_5_x!=0 and missile_ufo_5_y!=0):   
                 game_screen.blit(missile_ufo_fired_image, [missile_ufo_5_x, missile_ufo_5_y])
                 missile_ufo_5_y+=25
-           
+
+
         # level 4 thêm 3 ufo 6, 7, 8
         if int(score)>=1000:
+            if check_level3>0: 
+                game_screen.blit(levelup, [295, 215])
+            check_level3-=1
+            game_screen.blit(level4, [590, 30])
             #ufo 6
             # cập nhật vị trí ufo
             MoveUfo.move_ufo(ufo_6, ufo_width)
