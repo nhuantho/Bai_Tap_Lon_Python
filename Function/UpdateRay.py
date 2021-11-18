@@ -10,7 +10,7 @@ RANDOM_RAY_TIME_MIN = 30
 
 # cập nhật trạng thái khiêng
 def update_ray(ufo):
-    ray_sound=pygame.mixer.Sound('ray.ogg')
+    ray_sound=pygame.mixer.Sound('sound/ray.ogg')
     # Nếu chưa có một tia, thì cơ hội ngẫu nhiên sẽ có một tia
     if ufo.get('ray_time') == 0 and ufo.get('hit') is False:
         random_ray = random.randint(0, RANDOM_RAY)

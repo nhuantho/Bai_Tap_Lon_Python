@@ -62,32 +62,32 @@ font = pygame.font.SysFont('Helvetica', 16)
 
 # Load ảnh
 
-background_image = pygame.image.load('back_ground2.png').convert()
-base_image = pygame.image.load('base.png').convert_alpha()
-base_explpded_imade=pygame.image.load('base_explpded.png').convert_alpha()
+background_image = pygame.image.load('image/back_ground2.png').convert()
+base_image = pygame.image.load('image/base.png').convert_alpha()
+base_explpded_imade=pygame.image.load('image/base_explpded.png').convert_alpha()
 
-missile_image = pygame.image.load('missile.png').convert_alpha()
-missile_fired_image = pygame.image.load('missile_.png').convert_alpha()
-missile_ufo_fired_image = pygame.image.load('missile_ufo.png').convert_alpha()
+missile_image = pygame.image.load('image/missile.png').convert_alpha()
+missile_fired_image = pygame.image.load('image/missile_.png').convert_alpha()
+missile_ufo_fired_image = pygame.image.load('image/missile_ufo.png').convert_alpha()
 
 
-ufo_1_image = pygame.image.load('ufo_1.png').convert_alpha()
-ufo_2_image = pygame.image.load('ufo_2.png').convert_alpha()
-ufo_1_exploded_image = pygame.image.load('ufo_1_exploded.png').convert_alpha()
-ufo_2_exploded_image = pygame.image.load('ufo_2_exploded.png').convert_alpha()
-ufo_ray_image_1 = pygame.image.load('ufo_ray_1.png').convert_alpha()
-ufo_ray_image_2 = pygame.image.load('ufo_ray_2.png').convert_alpha()
+ufo_1_image = pygame.image.load('image/ufo_1.png').convert_alpha()
+ufo_2_image = pygame.image.load('image/ufo_2.png').convert_alpha()
+ufo_1_exploded_image = pygame.image.load('image/ufo_1_exploded.png').convert_alpha()
+ufo_2_exploded_image = pygame.image.load('image/ufo_2_exploded.png').convert_alpha()
+ufo_ray_image_1 = pygame.image.load('image/ufo_ray_1.png').convert_alpha()
+ufo_ray_image_2 = pygame.image.load('image/ufo_ray_2.png').convert_alpha()
 
-levelup= pygame.image.load('level_up.png').convert_alpha()
-level1= pygame.image.load('level_1.png').convert_alpha()
-level2= pygame.image.load('level_2.png').convert_alpha()
-level3= pygame.image.load('level_3.png').convert_alpha()
-level4= pygame.image.load('level_4.png').convert_alpha()
+levelup= pygame.image.load('image/level_up.png').convert_alpha()
+level1= pygame.image.load('image/level_1.png').convert_alpha()
+level2= pygame.image.load('image/level_2.png').convert_alpha()
+level3= pygame.image.load('image/level_3.png').convert_alpha()
+level4= pygame.image.load('image/level_4.png').convert_alpha()
 
 # Load âm thanh
-spaceship_hit_sound = pygame.mixer.Sound('spaceship_hit.ogg')
-launch_sound = pygame.mixer.Sound('launch.ogg')
-ray_sound=pygame.mixer.Sound('ray.ogg')
+spaceship_hit_sound = pygame.mixer.Sound('sound/spaceship_hit.ogg')
+launch_sound = pygame.mixer.Sound('sound/launch.ogg')
+ray_sound=pygame.mixer.Sound('sound/ray.ogg')
 
 
 
