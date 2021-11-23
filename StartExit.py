@@ -47,7 +47,7 @@ while run:
         sys.exit() 
     if start_button.draw()==True: 
         pygame.quit()
-        os.system('python A_Main.py')
+        os.system('python Main.py')
         sys.exit()
     pygame.display.update()
 pygame.quit()

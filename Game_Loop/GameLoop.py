@@ -217,8 +217,7 @@ def main():
                 missiles -= 1
                 launch_sound.play()
                 if missiles == 0:
-                    game_over = True
-                        
+                    game_over = True      
             # nhấn Return khi kết thúc trò chơi, bắt đầu trò chơi mới
             elif key_pressed[pygame.K_RETURN] and game_over is True:
                 game_over = False
@@ -743,19 +742,18 @@ def main():
         if game_over is True and missile_firing is False:
 	        if score > hi_score:
 	            hi_score = score
-	
 	        display_game_over()
             
 	
 
         # hiển thị bảng điểm
-        score_text = 'Score: ' + str(score)
+        score_text = 'Points: ' + str(score)
         display_scoreboard_data(score_text, 'left')
         missile_text = 'Missiles: ' + str(missiles)
         display_scoreboard_data(missile_text, 'centre')
 
 
-        hi_score_text = 'Point best: ' + str(hi_score)
+        hi_score_text = 'Points best: ' + str(hi_score)
         display_scoreboard_data(hi_score_text, 'right')
 
 
